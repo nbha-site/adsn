@@ -1,0 +1,135 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f9ff;
+  color: #1a2a40;
+}
+
+/* Sidebar verticale */
+.sidebar {
+  width: 220px;
+  background-color: #002f5e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  color: #4db8ff;
+}
+
+/* Contenu principal */
+.content {
+  margin-left: 220px;
+  padding: 40px 30px;
+  flex: 1;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.intro h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+
+/* .gallery { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crée des colonnes adaptatives */
+  gap: 15px; /* Espacement entre les images */
+}
+
+.gallery img {
+  width: 30%; /* Occupe une partie de la largeur du conteneur */
+  height: auto; /* Hauteur ajustée pour garder les proportions */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+  transition: transform 0.3s ease; /* Effet de transition pour le zoom au survol */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+}
+*/
+
+/*img {
+/*  width: 50%; /* L'image occupe toute la largeur de son conteneur */
+/*  height: auto; /* Hauteur ajustée pour garder les proportions */
+/*}
+
+}

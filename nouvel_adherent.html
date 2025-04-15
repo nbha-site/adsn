@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nouvel Adhérent - ADSN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">ADSN</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="documents.html">Documents pour la Direction</a></li>
+        <li><a href="nouvel_adherent.html">Nouvel adhérent</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Formulaire d'Adhésion</h1>
+      <p>Merci de remplir ce formulaire pour rejoindre notre association.</p>
+    </section>
+
+    <section class="adhesion-form">
+      <form action="mailto:nbha@free.fr" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required />
+        </div>
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Âge</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="telephone">Numéro de téléphone</label>
+          <input type="tel" id="telephone" name="telephone" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

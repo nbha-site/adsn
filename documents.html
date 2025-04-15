@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documents pour la Direction</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+  function checkPassword(event) {
+    event.preventDefault();
+    // Si le mot de passe a déjà été validé, accès direct
+    if (sessionStorage.getItem("accessGranted") === "true") {
+      window.location.href = "documents_securises.html";
+      return;
+    }
+
+    // Sinon, demander le mot de passe
+    const password = prompt("Veuillez entrer le mot de passe :");
+    if (password === "Direction") {
+      sessionStorage.setItem("accessGranted", "true");
+      window.location.href = "documents_securises.html";
+    } else {
+      alert("Mot de passe incorrect !");
+    }
+  }
+</script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">ADSN</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" onclick="checkPassword(event);">Documents pour la Direction</a></li>
+        <li><a href="nouvel_adherent.html">Nouvel adhérent</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Accès sécurisé</h1>
+      <p>Veuillez cliquer sur le lien ci-dessus pour accéder aux documents sécurisés.</p>
+    </section>
+  </main>
+</body>
+</html>
